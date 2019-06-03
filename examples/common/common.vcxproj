@@ -18,7 +18,7 @@
     <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <PlatformToolset>v140</PlatformToolset>
     <OutputDirectory>..\..\lib_win_x86_64\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
@@ -27,7 +27,7 @@
     <IntermediateDirectory>..\..\.obj\common_win_x86_64\</IntermediateDirectory>
     <PrimaryOutput>common</PrimaryOutput>
   </PropertyGroup>
-  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <PlatformToolset>v140</PlatformToolset>
     <OutputDirectory>..\..\lib_win_x86_64\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
@@ -38,24 +38,24 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
-  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
-  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">..\..\lib_win_x86_64\</OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">..\..\.obj\common_win_x86_64\</IntDir>
-    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">common</TargetName>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</IgnoreImportLibrary>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">..\..\lib_win_x86_64\</OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">..\..\.obj\commond_win_x86_64\</IntDir>
-    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">commond</TargetName>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\lib_win_x86_64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\.obj\common_win_x86_64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">common</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\lib_win_x86_64_d\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\.obj\commond_win_x86_64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">commond</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>.;..\..\depends\include;.;..\..\examples;D:/develop/work_project/QtAV/QtAV/examples/common/common;..\..\src;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\include;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\include\QtGui;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\include\QtANGLE;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\include\QtSql;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\include\QtCore;..\..\.moc\5.12.2\common;C:\VulkanSDK\1.0.51.0\include;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
@@ -68,7 +68,8 @@
       <Optimization>MaxSpeed</Optimization>
       <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;BUILD_QOPT_LIB;BUILD_COMMON_STATIC;_CRT_SECURE_NO_WARNINGS;BUILD_COMMON_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_SQL_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
-      <ProgramDataBaseFileName></ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -87,7 +88,7 @@
       <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;BUILD_QOPT_LIB;BUILD_COMMON_STATIC;_CRT_SECURE_NO_WARNINGS;BUILD_COMMON_LIB;QT_NO_DEBUG;QT_GUI_LIB;QT_SQL_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>.;..\..\depends\include;.;..\..\examples;D:/develop/work_project/QtAV/QtAV/examples/common/common;..\..\src;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\include;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\include\QtGui;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\include\QtANGLE;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\include\QtSql;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\include\QtCore;..\..\.moc\5.12.2\commond;C:\VulkanSDK\1.0.51.0\include;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
@@ -126,24 +127,24 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Config.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">Config.h;D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_predefs.h;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DBUILD_QOPT_LIB -DBUILD_COMMON_STATIC -D_CRT_SECURE_NO_WARNINGS -DBUILD_COMMON_LIB -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/develop/work_project/QtAV/QtAV/.moc/5.12.2/common/moc_predefs.h -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/mkspecs/win32-msvc -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/depends/include -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/examples -ID:/develop/work_project/QtAV/QtAV/examples/common/common -ID:/develop/work_project/QtAV/QtAV/src -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtSql -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtCore -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt&quot; Config.h -o D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_Config.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC Config.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_Config.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">Config.h;D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_predefs.h;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DBUILD_QOPT_LIB -DBUILD_COMMON_STATIC -D_CRT_SECURE_NO_WARNINGS -DBUILD_COMMON_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/develop/work_project/QtAV/QtAV/.moc/5.12.2/commond/moc_predefs.h -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/mkspecs/win32-msvc -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/depends/include -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/examples -ID:/develop/work_project/QtAV/QtAV/examples/common/common -ID:/develop/work_project/QtAV/QtAV/src -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtSql -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtCore -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt&quot; Config.h -o D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_Config.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC Config.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_Config.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Config.h;D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_predefs.h;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DBUILD_QOPT_LIB -DBUILD_COMMON_STATIC -D_CRT_SECURE_NO_WARNINGS -DBUILD_COMMON_LIB -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/develop/work_project/QtAV/QtAV/.moc/5.12.2/common/moc_predefs.h -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/mkspecs/win32-msvc -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/depends/include -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/examples -ID:/develop/work_project/QtAV/QtAV/examples/common/common -ID:/develop/work_project/QtAV/QtAV/src -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtSql -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" Config.h -o D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_Config.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC Config.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_Config.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Config.h;D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_predefs.h;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DBUILD_QOPT_LIB -DBUILD_COMMON_STATIC -D_CRT_SECURE_NO_WARNINGS -DBUILD_COMMON_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/develop/work_project/QtAV/QtAV/.moc/5.12.2/commond/moc_predefs.h -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/mkspecs/win32-msvc -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/depends/include -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/examples -ID:/develop/work_project/QtAV/QtAV/examples/common/common -ID:/develop/work_project/QtAV/QtAV/src -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtSql -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" Config.h -o D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_Config.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC Config.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_Config.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="ScreenSaver.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">ScreenSaver.h;D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_predefs.h;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DBUILD_QOPT_LIB -DBUILD_COMMON_STATIC -D_CRT_SECURE_NO_WARNINGS -DBUILD_COMMON_LIB -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/develop/work_project/QtAV/QtAV/.moc/5.12.2/common/moc_predefs.h -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/mkspecs/win32-msvc -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/depends/include -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/examples -ID:/develop/work_project/QtAV/QtAV/examples/common/common -ID:/develop/work_project/QtAV/QtAV/src -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtSql -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtCore -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt&quot; ScreenSaver.h -o D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_ScreenSaver.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC ScreenSaver.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_ScreenSaver.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">ScreenSaver.h;D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_predefs.h;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DBUILD_QOPT_LIB -DBUILD_COMMON_STATIC -D_CRT_SECURE_NO_WARNINGS -DBUILD_COMMON_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/develop/work_project/QtAV/QtAV/.moc/5.12.2/commond/moc_predefs.h -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/mkspecs/win32-msvc -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/depends/include -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/examples -ID:/develop/work_project/QtAV/QtAV/examples/common/common -ID:/develop/work_project/QtAV/QtAV/src -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtSql -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtCore -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um&quot; -I&quot;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt&quot; ScreenSaver.h -o D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_ScreenSaver.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC ScreenSaver.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_ScreenSaver.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ScreenSaver.h;D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_predefs.h;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DBUILD_QOPT_LIB -DBUILD_COMMON_STATIC -D_CRT_SECURE_NO_WARNINGS -DBUILD_COMMON_LIB -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/develop/work_project/QtAV/QtAV/.moc/5.12.2/common/moc_predefs.h -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/mkspecs/win32-msvc -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/depends/include -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/examples -ID:/develop/work_project/QtAV/QtAV/examples/common/common -ID:/develop/work_project/QtAV/QtAV/src -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtSql -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" ScreenSaver.h -o D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_ScreenSaver.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC ScreenSaver.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_ScreenSaver.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ScreenSaver.h;D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_predefs.h;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DBUILD_QOPT_LIB -DBUILD_COMMON_STATIC -D_CRT_SECURE_NO_WARNINGS -DBUILD_COMMON_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/develop/work_project/QtAV/QtAV/.moc/5.12.2/commond/moc_predefs.h -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/mkspecs/win32-msvc -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/depends/include -ID:/develop/work_project/QtAV/QtAV/examples/common -ID:/develop/work_project/QtAV/QtAV/examples -ID:/develop/work_project/QtAV/QtAV/examples/common/common -ID:/develop/work_project/QtAV/QtAV/src -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtGui -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtANGLE -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtSql -IC:/Qt/Qt5.12.2/5.12.2/msvc2015_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" ScreenSaver.h -o D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_ScreenSaver.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC ScreenSaver.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_ScreenSaver.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <ClInclude Include="common.h" />
     <ClInclude Include="common_export.h" />
@@ -151,38 +152,38 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\.moc\5.12.2\common\moc_Config.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\.moc\5.12.2\commond\moc_Config.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\.moc\5.12.2\common\moc_ScreenSaver.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\.moc\5.12.2\commond\moc_ScreenSaver.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_predefs.h.cbt">
       <FileType>Document</FileType>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">cl -BxC:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\mkspecs\features\data\dummy.cpp 2>NUL >D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_predefs.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">Generate moc_predefs.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_predefs.h;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -BxC:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_predefs.h.cbt">
       <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</ExcludedFromBuild>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">cl -BxC:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\mkspecs\features\data\dummy.cpp 2>NUL >D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_predefs.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">Generate moc_predefs.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -BxC:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_predefs.h;%(Outputs)</Outputs>
     </CustomBuild>
     <ClCompile Include="..\..\.rcc\5.12.2\common\qrc_theme.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\.rcc\5.12.2\commond\qrc_theme.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -212,14 +213,14 @@
     <None Include="theme\default\stop.svg" />
     <CustomBuild Include="theme\theme.qrc">
       <FileType>Document</FileType>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">theme\theme.qrc;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\rcc.exe;theme\default\pause.svg;theme\default\info.svg;theme\default\stop.svg;theme\default\close.svg;theme\default\open.svg;theme\default\help.svg;theme\default\play.svg;theme\default\mute.svg;theme\default\forward.svg;theme\default\volume.svg;theme\default\backward.svg;theme\default\fullscreen.svg;theme\dark\pause.svg;theme\dark\info.svg;theme\dark\sound.svg;theme\dark\stop.svg;theme\dark\close.svg;theme\dark\open.svg;theme\dark\help.svg;theme\dark\play.svg;theme\dark\menu.svg;theme\dark\forward.svg;theme\dark\capture.svg;theme\dark\backward.svg;theme\dark\fullscreen.svg;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\rcc.exe -name theme theme\theme.qrc -o D:\develop\work_project\QtAV\QtAV\.rcc\5.12.2\common\qrc_theme.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">RCC theme/theme.qrc</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">D:\develop\work_project\QtAV\QtAV\.rcc\5.12.2\common\qrc_theme.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">theme\theme.qrc;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\rcc.exe;theme\default\pause.svg;theme\default\info.svg;theme\default\stop.svg;theme\default\close.svg;theme\default\open.svg;theme\default\help.svg;theme\default\play.svg;theme\default\mute.svg;theme\default\forward.svg;theme\default\volume.svg;theme\default\backward.svg;theme\default\fullscreen.svg;theme\dark\pause.svg;theme\dark\info.svg;theme\dark\sound.svg;theme\dark\stop.svg;theme\dark\close.svg;theme\dark\open.svg;theme\dark\help.svg;theme\dark\play.svg;theme\dark\menu.svg;theme\dark\forward.svg;theme\dark\capture.svg;theme\dark\backward.svg;theme\dark\fullscreen.svg;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\rcc.exe -name theme theme\theme.qrc -o D:\develop\work_project\QtAV\QtAV\.rcc\5.12.2\commond\qrc_theme.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">RCC theme/theme.qrc</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">D:\develop\work_project\QtAV\QtAV\.rcc\5.12.2\commond\qrc_theme.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">theme\theme.qrc;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\rcc.exe;theme\default\pause.svg;theme\default\info.svg;theme\default\stop.svg;theme\default\close.svg;theme\default\open.svg;theme\default\help.svg;theme\default\play.svg;theme\default\mute.svg;theme\default\forward.svg;theme\default\volume.svg;theme\default\backward.svg;theme\default\fullscreen.svg;theme\dark\pause.svg;theme\dark\info.svg;theme\dark\sound.svg;theme\dark\stop.svg;theme\dark\close.svg;theme\dark\open.svg;theme\dark\help.svg;theme\dark\play.svg;theme\dark\menu.svg;theme\dark\forward.svg;theme\dark\capture.svg;theme\dark\backward.svg;theme\dark\fullscreen.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\rcc.exe -name theme theme\theme.qrc -o D:\develop\work_project\QtAV\QtAV\.rcc\5.12.2\common\qrc_theme.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RCC theme/theme.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\develop\work_project\QtAV\QtAV\.rcc\5.12.2\common\qrc_theme.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">theme\theme.qrc;C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\rcc.exe;theme\default\pause.svg;theme\default\info.svg;theme\default\stop.svg;theme\default\close.svg;theme\default\open.svg;theme\default\help.svg;theme\default\play.svg;theme\default\mute.svg;theme\default\forward.svg;theme\default\volume.svg;theme\default\backward.svg;theme\default\fullscreen.svg;theme\dark\pause.svg;theme\dark\info.svg;theme\dark\sound.svg;theme\dark\stop.svg;theme\dark\close.svg;theme\dark\open.svg;theme\dark\help.svg;theme\dark\play.svg;theme\dark\menu.svg;theme\dark\forward.svg;theme\dark\capture.svg;theme\dark\backward.svg;theme\dark\fullscreen.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\Qt5.12.2\5.12.2\msvc2015_64\bin\rcc.exe -name theme theme\theme.qrc -o D:\develop\work_project\QtAV\QtAV\.rcc\5.12.2\commond\qrc_theme.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RCC theme/theme.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\develop\work_project\QtAV\QtAV\.rcc\5.12.2\commond\qrc_theme.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <None Include="theme\default\volume.svg" />
   </ItemGroup>
