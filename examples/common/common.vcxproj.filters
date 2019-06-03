@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSaver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qoptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Config.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ScreenSaver.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common_export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qoptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\.moc\5.12.2\common\moc_Config.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\.moc\5.12.2\commond\moc_Config.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\.moc\5.12.2\common\moc_ScreenSaver.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\.moc\5.12.2\commond\moc_ScreenSaver.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\common\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\commond\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <ClCompile Include="..\..\.rcc\5.12.2\common\qrc_theme.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\.rcc\5.12.2\commond\qrc_theme.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="theme\dark\backward.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\default\backward.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\dark\capture.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\dark\close.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\default\close.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\dark\forward.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\default\forward.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\dark\fullscreen.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\default\fullscreen.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\dark\help.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\default\help.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\dark\info.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\default\info.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\dark\menu.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\default\mute.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\dark\open.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\default\open.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\dark\pause.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\default\pause.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\dark\play.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\default\play.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\dark\sound.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\dark\stop.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="theme\default\stop.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <CustomBuild Include="theme\theme.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <None Include="theme\default\volume.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qtquick2applicationviewer\qtquick2applicationviewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="qtquick2applicationviewer\qtquick2applicationviewer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\QMLPlayer\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <ClCompile Include="..\..\.moc\5.12.2\QMLPlayer\moc_qtquick2applicationviewer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\.rcc\5.12.2\QMLPlayer\qrc_qmlplayer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="i18n\QMLPlayer.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="i18n\QMLPlayer_zh_CN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="qml\QMLPlayer\About.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\AudioPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\Button.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\ConfigPanel.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\ControlPanel.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\DelegateItem.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\EffectPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\MediaInfoPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\Menu.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\MiscPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\Page.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\PlayListPanel.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\ProgressBar.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="i18n\QMLPlayer_zh_CN.qm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\Slider.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\SubtitlePage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\VideoCodec.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qml\QMLPlayer\main.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <CustomBuild Include="qmlplayer.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <None Include="qml\QMLPlayer\utils.js">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="android\AndroidManifest.xml">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\src\org\qtav\qmlplayer\QMLPlayerActivity.java">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\build.gradle">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\gradle\wrapper\gradle-wrapper.jar">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\gradle\wrapper\gradle-wrapper.properties">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\gradlew.bat">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\gradlew">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\res\values\libs.xml">
+      <Filter>Distribution Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\develop\work_project\QtAV\QtAV\examples\QMLPlayer\QMLPlayer_resource.rc" />
+  </ItemGroup>
+</Project>

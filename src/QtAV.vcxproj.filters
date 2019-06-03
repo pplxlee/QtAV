@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AVClock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AVCompat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\AVDecoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AVDemuxThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AVDemuxer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\AVEncoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AVError.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AVMuxer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output\AVOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AVPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AVPlayerPrivate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AVThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AVTranscoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\audio\AudioDecoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\audio\AudioDecoderFFmpeg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\audio\AudioEncoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\audio\AudioEncoderFFmpeg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioFormat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output\audio\AudioOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output\audio\AudioOutputBackend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output\audio\AudioOutputDSound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output\audio\AudioOutputNull.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output\audio\AudioOutputOpenAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output\audio\AudioOutputXAudio2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioResampler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioResamplerFF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioResamplerLibav.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\CharDistribution.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subtitle\CharsetDetector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorTransform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opengl\ConvolutionShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\D3D11VP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\DirectXHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\EncodeFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\Filter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\FilterContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\FilterManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\GLSLFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\GPUMemCopy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opengl\Geometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opengl\GeometryRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageConverterFF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\JpCntx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\LangBulgarianModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\LangCyrillicModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\LangGreekModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\LangHebrewModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\LangHungarianModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\LangThaiModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\LibAVFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="io\MediaIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opengl\OpenGLHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output\video\OpenGLRendererBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opengl\OpenGLTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opengl\OpenGLVideo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output\video\OpenGLWindowRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output\OutputSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Packet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subtitle\PlainText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subtitle\PlayerSubtitle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="io\QIODeviceIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output\video\QPainterRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QtAV_Global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opengl\ShaderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Statistics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subtitle\SubImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opengl\SubImagesGeometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opengl\SubImagesRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subtitle\Subtitle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filter\SubtitleFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subtitle\SubtitleProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subtitle\SubtitleProcessorFFmpeg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subtitle\SubtitleProcessorLibASS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\video\SurfaceInteropCUDA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\SurfaceInteropD3D11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\SurfaceInteropD3D11EGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\SurfaceInteropD3D11GL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\SurfaceInteropD3D9.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\SurfaceInteropD3D9EGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\SurfaceInteropD3D9GL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoCapture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\video\VideoDecoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\video\VideoDecoderCUDA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\video\VideoDecoderD3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\video\VideoDecoderD3D11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\video\VideoDecoderDXVA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\video\VideoDecoderFFmpeg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\video\VideoDecoderFFmpegBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\video\VideoDecoderFFmpegHW.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\video\VideoEncoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="codec\video\VideoEncoderFFmpeg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoFormat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoFrameExtractor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output\video\VideoOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output\video\VideoRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opengl\VideoShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opengl\VideoShaderObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="capi\ass_api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cuda\cuda_api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="capi\egl_api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opengl\gl_api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\internal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsBig5Prober.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsCharSetProber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsEUCJPProber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsEUCKRProber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsEUCTWProber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsEscCharsetProber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsEscSM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsGB2312Prober.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsHebrewProber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsLatin1Prober.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsMBCSGroupProber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsMBCSSM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsSBCSGroupProber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsSBCharSetProber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsSJISProber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsUTF8Prober.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\nsUniversalDetector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="capi\openal_api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\contrib\uchardet\src\uchardet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QtAV\AVClock.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\private\AVCompat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\AVDecoder.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\private\AVDecoder_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="AVDemuxThread.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QtAV\AVDemuxer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QtAV\AVEncoder.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\private\AVEncoder_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\AVError.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\AVMuxer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\AVOutput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\private\AVOutput_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\AVPlayer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="AVPlayerPrivate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="AVThread.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="AVThread_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\AVTranscoder.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\AudioDecoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\AudioEncoder.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\AudioFormat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\AudioFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\AudioOutput.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QtAV\private\AudioOutputBackend.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\AudioResampler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\private\AudioResampler_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="AudioThread.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="utils\BlockingQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\CharDistribution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="subtitle\CharsetDetector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorTransform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\ConvolutionShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\D3D11VP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\DirectXHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\EncodeFilter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\FactoryDefine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\Filter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\FilterContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filter\FilterManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\private\Filter_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\Frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\FrameReader.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\private\Frame_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\GLSLFilter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="utils\GPUMemCopy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\Geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\GeometryRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageConverter_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\JpCntx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\LibAVFilter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="utils\Logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\MediaIO.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\private\MediaIO_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="opengl\OpenGLHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\OpenGLRendererBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\private\OpenGLRendererBase_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\OpenGLTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\OpenGLVideo.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QtAV\OpenGLWindowRenderer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="output\OutputSet.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\Packet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="subtitle\PlainText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\private\PlayerSubtitle.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\QPainterRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\private\QPainterRenderer_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\QtAV.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\QtAV">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\QtAV_Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="opengl\ShaderManager.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="utils\SharedPtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\Statistics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\SubImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="opengl\SubImagesGeometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="opengl\SubImagesRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\Subtitle.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QtAV\SubtitleFilter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\private\SubtitleProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\SurfaceInterop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="codec\video\SurfaceInteropCUDA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\SurfaceInteropD3D11.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\SurfaceInteropD3D9.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\VideoCapture.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\VideoDecoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="codec\video\VideoDecoderD3D.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="codec\video\VideoDecoderFFmpegBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="codec\video\VideoDecoderFFmpegHW.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="codec\video\VideoDecoderFFmpegHW_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\VideoEncoder.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\VideoFormat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\VideoFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\VideoFrameExtractor.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QtAV\VideoOutput.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\VideoRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\private\VideoRenderer_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\VideoShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="QtAV\VideoShaderObject.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="QtAV\private\VideoShader_p.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="VideoThread.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="capi\ass_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\capi\capi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cuda\cuda_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\dptr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="capi\egl_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\private\factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="opengl\gl_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cuda\helper_cuda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\private\mkid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsBig5Prober.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsCharSetProber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsCodingStateMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsEUCJPProber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsEUCKRProber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsEUCTWProber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsEscCharsetProber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsGB2312Prober.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsHebrewProber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsLatin1Prober.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsMBCSGroupProber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsPkgInt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsSBCSGroupProber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsSBCharSetProber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsSJISProber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsUTF8Prober.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nsUniversalDetector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\nscore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cuda\dllapi\nv_inc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="capi\openal_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\private\prepost.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\prmem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\ring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\private\singleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\contrib\uchardet\src\uchardet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QtAV\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="output\audio\xaudio2_compat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\QtAV\AudioDecoderFFmpeg.moc.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\QtAVd\AudioDecoderFFmpeg.moc.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\.obj\QtAV_win_x86_64\CopyFrame_SSE2.obj.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\.obj\QtAVd_win_x86_64\CopyFrame_SSE2.obj.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\.obj\QtAV_win_x86_64\CopyFrame_SSE4.obj.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\.obj\QtAVd_win_x86_64\CopyFrame_SSE4.obj.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\QtAV\QIODeviceIO.moc.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\QtAVd\QIODeviceIO.moc.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\QtAV\VideoDecoderCUDA.moc.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\QtAVd\VideoDecoderCUDA.moc.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\QtAV\VideoDecoderFFmpeg.moc.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\QtAVd\VideoDecoderFFmpeg.moc.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\QtAV\VideoEncoderFFmpeg.moc.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\QtAVd\VideoEncoderFFmpeg.moc.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_AVClock.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_AVClock.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_AVDecoder.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_AVDecoder.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_AVDemuxThread.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_AVDemuxThread.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_AVDemuxer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_AVDemuxer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_AVEncoder.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_AVEncoder.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_AVMuxer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_AVMuxer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_AVPlayer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_AVPlayer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_AVThread.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_AVThread.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_AVTranscoder.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_AVTranscoder.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_AudioEncoder.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_AudioEncoder.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_AudioOutput.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_AudioOutput.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_AudioOutputBackend.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_AudioOutputBackend.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_AudioThread.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_AudioThread.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_EncodeFilter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_EncodeFilter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_Filter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_Filter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_FrameReader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_FrameReader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_GLSLFilter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_GLSLFilter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_LibAVFilter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_LibAVFilter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_MediaIO.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_MediaIO.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_OpenGLVideo.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_OpenGLVideo.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_OpenGLWindowRenderer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_OpenGLWindowRenderer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_OutputSet.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_OutputSet.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_PlayerSubtitle.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_PlayerSubtitle.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_ShaderManager.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_ShaderManager.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_Subtitle.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_Subtitle.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_SubtitleFilter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_SubtitleFilter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_VideoCapture.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_VideoCapture.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_VideoDecoderD3D.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_VideoDecoderD3D.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_VideoDecoderFFmpegHW.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_VideoDecoderFFmpegHW.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_VideoEncoder.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_VideoEncoder.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_VideoFrameExtractor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_VideoFrameExtractor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_VideoOutput.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_VideoOutput.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_VideoShaderObject.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_VideoShaderObject.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAV\moc_VideoThread.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.moc\5.12.2\QtAVd\moc_VideoThread.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\QtAV\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\develop\work_project\QtAV\QtAV\.moc\5.12.2\QtAVd\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <ClCompile Include="..\.rcc\5.12.2\QtAV\qrc_QtAV.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.rcc\5.12.2\QtAVd\qrc_QtAV.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.rcc\5.12.2\QtAV\qrc_shaders.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\.rcc\5.12.2\QtAVd\qrc_shaders.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="i18n\QtAV.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="i18n\QtAV_zh_CN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QtAV.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <None Include="QtAV.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="i18n\QtAV_zh_CN.qm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shaders\packed.f.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shaders\planar.f.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <CustomBuild Include="shaders\shaders.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <None Include="shaders\video.vert">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\develop\work_project\QtAV\QtAV\src\QtAV_resource.rc" />
+    <ResourceCompile Include="D:\develop\work_project\QtAV\QtAV\src\QtAVd_resource.rc" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,184 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtAV", "D:/develop/work_project/QtAV/QtAV/src\QtAV.vcxproj", "{F4DAF2BF-24AE-357C-AE25-C081E2CB1C10}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtAVWidgets", "D:/develop/work_project/QtAV/QtAV/widgets\QtAVWidgets.vcxproj", "{571E2F8B-EEE1-358E-A3B9-1BF5B3C3654E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QmlAV", "D:/develop/work_project/QtAV/QtAV/qml\QmlAV.vcxproj", "{C31945C7-531F-39ED-9948-98EDFD975975}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common", "D:/develop/work_project/QtAV/QtAV/examples/common\common.vcxproj", "{0B31D35F-19AC-3903-8892-B45E006E0811}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "audiopipeline", "D:/develop/work_project/QtAV/QtAV/examples/audiopipeline\audiopipeline.vcxproj", "{22854E41-0851-3BA0-8D66-A4D74C30C111}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sharedoutput", "D:/develop/work_project/QtAV/QtAV/examples/sharedoutput\sharedoutput.vcxproj", "{D8AFE61E-7787-336F-B7F5-1ADD6D33962B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simpletranscode", "D:/develop/work_project/QtAV/QtAV/examples/simpletranscode\simpletranscode.vcxproj", "{EC71C64E-0B8A-3342-BD2F-024C90BAA679}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simpleplayer", "D:/develop/work_project/QtAV/QtAV/examples/simpleplayer\simpleplayer.vcxproj", "{86BAA01A-4702-3CCC-8C04-6F6A2FF1645B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Player", "D:/develop/work_project/QtAV/QtAV/examples/player\Player.vcxproj", "{E7C2AEAF-5668-3295-B364-6E067A154D76}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F4DAF2BF-24AE-357C-AE25-C081E2CB1C10} = {F4DAF2BF-24AE-357C-AE25-C081E2CB1C10}
+		{571E2F8B-EEE1-358E-A3B9-1BF5B3C3654E} = {571E2F8B-EEE1-358E-A3B9-1BF5B3C3654E}
+		{0B31D35F-19AC-3903-8892-B45E006E0811} = {0B31D35F-19AC-3903-8892-B45E006E0811}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "filters", "D:/develop/work_project/QtAV/QtAV/examples/filters\filters.vcxproj", "{D062B2EF-F1A4-351A-A2D0-C64411D09307}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "framereader", "D:/develop/work_project/QtAV/QtAV/examples/framereader\framereader.vcxproj", "{AB14FA4E-3F5E-3264-83BE-4CF5F5E2C34A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "videocapture", "D:/develop/work_project/QtAV/QtAV/examples/videocapture\videocapture.vcxproj", "{1895EF5F-1B5D-302D-AB16-944B07E4B34C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "videographicsitem", "D:/develop/work_project/QtAV/QtAV/examples/videographicsitem\videographicsitem.vcxproj", "{184FF21A-516D-3D7C-8757-5736BB8F1808}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "videogroup", "D:/develop/work_project/QtAV/QtAV/examples/videogroup\videogroup.vcxproj", "{32ACC59A-0EAC-36D4-9BC5-A3B0A8AA79E3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "videowall", "D:/develop/work_project/QtAV/QtAV/examples/videowall\videowall.vcxproj", "{8EC9467D-A623-3E6E-8918-7EF02CF1FC1F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shader", "D:/develop/work_project/QtAV/QtAV/examples/shader\shader.vcxproj", "{4DBAE849-91EC-3960-A8B7-AD0AA642F9D1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glslfilter", "D:/develop/work_project/QtAV/QtAV/examples/glslfilter\glslfilter.vcxproj", "{755B5CC5-0F07-3462-9A27-31F73BBD357C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "window", "D:/develop/work_project/QtAV/QtAV/examples/window\window.vcxproj", "{52B4CEB6-D840-3DDB-902B-CF56427B1BB1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QMLPlayer", "D:/develop/work_project/QtAV/QtAV/examples/QMLPlayer\QMLPlayer.vcxproj", "{8F446067-F983-338D-B913-EF595CEFA086}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0B31D35F-19AC-3903-8892-B45E006E0811} = {0B31D35F-19AC-3903-8892-B45E006E0811}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ao", "D:/develop/work_project/QtAV/QtAV/tests/ao\ao.vcxproj", "{BBD1CBE6-0C1E-300C-928B-57960DE7E20E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "decoder", "D:/develop/work_project/QtAV/QtAV/tests/decoder\decoder.vcxproj", "{AE5A5EBA-3AAB-315A-9E16-E7BE0EA8FB61}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "subtitle", "D:/develop/work_project/QtAV/QtAV/tests/subtitle\subtitle.vcxproj", "{89F11AD2-8616-397F-BB06-24E513FB253D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "transcode", "D:/develop/work_project/QtAV/QtAV/tests/transcode\transcode.vcxproj", "{C3458D82-1929-3C6F-A239-05CBBF5C8464}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "extract", "D:/develop/work_project/QtAV/QtAV/tests/extract\extract.vcxproj", "{BD899216-5F90-3E66-A488-607AE0CB2559}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qiodevice", "D:/develop/work_project/QtAV/QtAV/tests/qiodevice\qiodevice.vcxproj", "{506468F7-FA9B-31A2-8CD6-2D45A1DE117A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qrc", "D:/develop/work_project/QtAV/QtAV/tests/qrc\qrc.vcxproj", "{10DB2A66-4ABB-3195-BE59-75BD2845A8C9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "playerthread", "D:/develop/work_project/QtAV/QtAV/tests/playerthread\playerthread.vcxproj", "{FF9D7138-7FA9-3D91-9E17-436C991FFD1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4DAF2BF-24AE-357C-AE25-C081E2CB1C10}.Debug|x64.ActiveCfg = Debug|x64
+		{F4DAF2BF-24AE-357C-AE25-C081E2CB1C10}.Debug|x64.Build.0 = Debug|x64
+		{F4DAF2BF-24AE-357C-AE25-C081E2CB1C10}.Release|x64.ActiveCfg = Release|x64
+		{F4DAF2BF-24AE-357C-AE25-C081E2CB1C10}.Release|x64.Build.0 = Release|x64
+		{571E2F8B-EEE1-358E-A3B9-1BF5B3C3654E}.Debug|x64.ActiveCfg = Debug|x64
+		{571E2F8B-EEE1-358E-A3B9-1BF5B3C3654E}.Debug|x64.Build.0 = Debug|x64
+		{571E2F8B-EEE1-358E-A3B9-1BF5B3C3654E}.Release|x64.ActiveCfg = Release|x64
+		{571E2F8B-EEE1-358E-A3B9-1BF5B3C3654E}.Release|x64.Build.0 = Release|x64
+		{C31945C7-531F-39ED-9948-98EDFD975975}.Debug|x64.ActiveCfg = Debug|x64
+		{C31945C7-531F-39ED-9948-98EDFD975975}.Debug|x64.Build.0 = Debug|x64
+		{C31945C7-531F-39ED-9948-98EDFD975975}.Release|x64.ActiveCfg = Release|x64
+		{C31945C7-531F-39ED-9948-98EDFD975975}.Release|x64.Build.0 = Release|x64
+		{0B31D35F-19AC-3903-8892-B45E006E0811}.Debug|x64.ActiveCfg = Debug|x64
+		{0B31D35F-19AC-3903-8892-B45E006E0811}.Debug|x64.Build.0 = Debug|x64
+		{0B31D35F-19AC-3903-8892-B45E006E0811}.Release|x64.ActiveCfg = Release|x64
+		{0B31D35F-19AC-3903-8892-B45E006E0811}.Release|x64.Build.0 = Release|x64
+		{22854E41-0851-3BA0-8D66-A4D74C30C111}.Debug|x64.ActiveCfg = Debug|x64
+		{22854E41-0851-3BA0-8D66-A4D74C30C111}.Debug|x64.Build.0 = Debug|x64
+		{22854E41-0851-3BA0-8D66-A4D74C30C111}.Release|x64.ActiveCfg = Release|x64
+		{22854E41-0851-3BA0-8D66-A4D74C30C111}.Release|x64.Build.0 = Release|x64
+		{D8AFE61E-7787-336F-B7F5-1ADD6D33962B}.Debug|x64.ActiveCfg = Debug|x64
+		{D8AFE61E-7787-336F-B7F5-1ADD6D33962B}.Debug|x64.Build.0 = Debug|x64
+		{D8AFE61E-7787-336F-B7F5-1ADD6D33962B}.Release|x64.ActiveCfg = Release|x64
+		{D8AFE61E-7787-336F-B7F5-1ADD6D33962B}.Release|x64.Build.0 = Release|x64
+		{EC71C64E-0B8A-3342-BD2F-024C90BAA679}.Debug|x64.ActiveCfg = Debug|x64
+		{EC71C64E-0B8A-3342-BD2F-024C90BAA679}.Debug|x64.Build.0 = Debug|x64
+		{EC71C64E-0B8A-3342-BD2F-024C90BAA679}.Release|x64.ActiveCfg = Release|x64
+		{EC71C64E-0B8A-3342-BD2F-024C90BAA679}.Release|x64.Build.0 = Release|x64
+		{86BAA01A-4702-3CCC-8C04-6F6A2FF1645B}.Debug|x64.ActiveCfg = Debug|x64
+		{86BAA01A-4702-3CCC-8C04-6F6A2FF1645B}.Debug|x64.Build.0 = Debug|x64
+		{86BAA01A-4702-3CCC-8C04-6F6A2FF1645B}.Release|x64.ActiveCfg = Release|x64
+		{86BAA01A-4702-3CCC-8C04-6F6A2FF1645B}.Release|x64.Build.0 = Release|x64
+		{E7C2AEAF-5668-3295-B364-6E067A154D76}.Debug|x64.ActiveCfg = Debug|x64
+		{E7C2AEAF-5668-3295-B364-6E067A154D76}.Debug|x64.Build.0 = Debug|x64
+		{E7C2AEAF-5668-3295-B364-6E067A154D76}.Release|x64.ActiveCfg = Release|x64
+		{E7C2AEAF-5668-3295-B364-6E067A154D76}.Release|x64.Build.0 = Release|x64
+		{D062B2EF-F1A4-351A-A2D0-C64411D09307}.Debug|x64.ActiveCfg = Debug|x64
+		{D062B2EF-F1A4-351A-A2D0-C64411D09307}.Debug|x64.Build.0 = Debug|x64
+		{D062B2EF-F1A4-351A-A2D0-C64411D09307}.Release|x64.ActiveCfg = Release|x64
+		{D062B2EF-F1A4-351A-A2D0-C64411D09307}.Release|x64.Build.0 = Release|x64
+		{AB14FA4E-3F5E-3264-83BE-4CF5F5E2C34A}.Debug|x64.ActiveCfg = Debug|x64
+		{AB14FA4E-3F5E-3264-83BE-4CF5F5E2C34A}.Debug|x64.Build.0 = Debug|x64
+		{AB14FA4E-3F5E-3264-83BE-4CF5F5E2C34A}.Release|x64.ActiveCfg = Release|x64
+		{AB14FA4E-3F5E-3264-83BE-4CF5F5E2C34A}.Release|x64.Build.0 = Release|x64
+		{1895EF5F-1B5D-302D-AB16-944B07E4B34C}.Debug|x64.ActiveCfg = Debug|x64
+		{1895EF5F-1B5D-302D-AB16-944B07E4B34C}.Debug|x64.Build.0 = Debug|x64
+		{1895EF5F-1B5D-302D-AB16-944B07E4B34C}.Release|x64.ActiveCfg = Release|x64
+		{1895EF5F-1B5D-302D-AB16-944B07E4B34C}.Release|x64.Build.0 = Release|x64
+		{184FF21A-516D-3D7C-8757-5736BB8F1808}.Debug|x64.ActiveCfg = Debug|x64
+		{184FF21A-516D-3D7C-8757-5736BB8F1808}.Debug|x64.Build.0 = Debug|x64
+		{184FF21A-516D-3D7C-8757-5736BB8F1808}.Release|x64.ActiveCfg = Release|x64
+		{184FF21A-516D-3D7C-8757-5736BB8F1808}.Release|x64.Build.0 = Release|x64
+		{32ACC59A-0EAC-36D4-9BC5-A3B0A8AA79E3}.Debug|x64.ActiveCfg = Debug|x64
+		{32ACC59A-0EAC-36D4-9BC5-A3B0A8AA79E3}.Debug|x64.Build.0 = Debug|x64
+		{32ACC59A-0EAC-36D4-9BC5-A3B0A8AA79E3}.Release|x64.ActiveCfg = Release|x64
+		{32ACC59A-0EAC-36D4-9BC5-A3B0A8AA79E3}.Release|x64.Build.0 = Release|x64
+		{8EC9467D-A623-3E6E-8918-7EF02CF1FC1F}.Debug|x64.ActiveCfg = Debug|x64
+		{8EC9467D-A623-3E6E-8918-7EF02CF1FC1F}.Debug|x64.Build.0 = Debug|x64
+		{8EC9467D-A623-3E6E-8918-7EF02CF1FC1F}.Release|x64.ActiveCfg = Release|x64
+		{8EC9467D-A623-3E6E-8918-7EF02CF1FC1F}.Release|x64.Build.0 = Release|x64
+		{4DBAE849-91EC-3960-A8B7-AD0AA642F9D1}.Debug|x64.ActiveCfg = Debug|x64
+		{4DBAE849-91EC-3960-A8B7-AD0AA642F9D1}.Debug|x64.Build.0 = Debug|x64
+		{4DBAE849-91EC-3960-A8B7-AD0AA642F9D1}.Release|x64.ActiveCfg = Release|x64
+		{4DBAE849-91EC-3960-A8B7-AD0AA642F9D1}.Release|x64.Build.0 = Release|x64
+		{755B5CC5-0F07-3462-9A27-31F73BBD357C}.Debug|x64.ActiveCfg = Debug|x64
+		{755B5CC5-0F07-3462-9A27-31F73BBD357C}.Debug|x64.Build.0 = Debug|x64
+		{755B5CC5-0F07-3462-9A27-31F73BBD357C}.Release|x64.ActiveCfg = Release|x64
+		{755B5CC5-0F07-3462-9A27-31F73BBD357C}.Release|x64.Build.0 = Release|x64
+		{52B4CEB6-D840-3DDB-902B-CF56427B1BB1}.Debug|x64.ActiveCfg = Debug|x64
+		{52B4CEB6-D840-3DDB-902B-CF56427B1BB1}.Debug|x64.Build.0 = Debug|x64
+		{52B4CEB6-D840-3DDB-902B-CF56427B1BB1}.Release|x64.ActiveCfg = Release|x64
+		{52B4CEB6-D840-3DDB-902B-CF56427B1BB1}.Release|x64.Build.0 = Release|x64
+		{8F446067-F983-338D-B913-EF595CEFA086}.Debug|x64.ActiveCfg = Debug|x64
+		{8F446067-F983-338D-B913-EF595CEFA086}.Debug|x64.Build.0 = Debug|x64
+		{8F446067-F983-338D-B913-EF595CEFA086}.Release|x64.ActiveCfg = Release|x64
+		{8F446067-F983-338D-B913-EF595CEFA086}.Release|x64.Build.0 = Release|x64
+		{BBD1CBE6-0C1E-300C-928B-57960DE7E20E}.Debug|x64.ActiveCfg = Debug|x64
+		{BBD1CBE6-0C1E-300C-928B-57960DE7E20E}.Debug|x64.Build.0 = Debug|x64
+		{BBD1CBE6-0C1E-300C-928B-57960DE7E20E}.Release|x64.ActiveCfg = Release|x64
+		{BBD1CBE6-0C1E-300C-928B-57960DE7E20E}.Release|x64.Build.0 = Release|x64
+		{AE5A5EBA-3AAB-315A-9E16-E7BE0EA8FB61}.Debug|x64.ActiveCfg = Debug|x64
+		{AE5A5EBA-3AAB-315A-9E16-E7BE0EA8FB61}.Debug|x64.Build.0 = Debug|x64
+		{AE5A5EBA-3AAB-315A-9E16-E7BE0EA8FB61}.Release|x64.ActiveCfg = Release|x64
+		{AE5A5EBA-3AAB-315A-9E16-E7BE0EA8FB61}.Release|x64.Build.0 = Release|x64
+		{89F11AD2-8616-397F-BB06-24E513FB253D}.Debug|x64.ActiveCfg = Debug|x64
+		{89F11AD2-8616-397F-BB06-24E513FB253D}.Debug|x64.Build.0 = Debug|x64
+		{89F11AD2-8616-397F-BB06-24E513FB253D}.Release|x64.ActiveCfg = Release|x64
+		{89F11AD2-8616-397F-BB06-24E513FB253D}.Release|x64.Build.0 = Release|x64
+		{C3458D82-1929-3C6F-A239-05CBBF5C8464}.Debug|x64.ActiveCfg = Debug|x64
+		{C3458D82-1929-3C6F-A239-05CBBF5C8464}.Debug|x64.Build.0 = Debug|x64
+		{C3458D82-1929-3C6F-A239-05CBBF5C8464}.Release|x64.ActiveCfg = Release|x64
+		{C3458D82-1929-3C6F-A239-05CBBF5C8464}.Release|x64.Build.0 = Release|x64
+		{BD899216-5F90-3E66-A488-607AE0CB2559}.Debug|x64.ActiveCfg = Debug|x64
+		{BD899216-5F90-3E66-A488-607AE0CB2559}.Debug|x64.Build.0 = Debug|x64
+		{BD899216-5F90-3E66-A488-607AE0CB2559}.Release|x64.ActiveCfg = Release|x64
+		{BD899216-5F90-3E66-A488-607AE0CB2559}.Release|x64.Build.0 = Release|x64
+		{506468F7-FA9B-31A2-8CD6-2D45A1DE117A}.Debug|x64.ActiveCfg = Debug|x64
+		{506468F7-FA9B-31A2-8CD6-2D45A1DE117A}.Debug|x64.Build.0 = Debug|x64
+		{506468F7-FA9B-31A2-8CD6-2D45A1DE117A}.Release|x64.ActiveCfg = Release|x64
+		{506468F7-FA9B-31A2-8CD6-2D45A1DE117A}.Release|x64.Build.0 = Release|x64
+		{10DB2A66-4ABB-3195-BE59-75BD2845A8C9}.Debug|x64.ActiveCfg = Debug|x64
+		{10DB2A66-4ABB-3195-BE59-75BD2845A8C9}.Debug|x64.Build.0 = Debug|x64
+		{10DB2A66-4ABB-3195-BE59-75BD2845A8C9}.Release|x64.ActiveCfg = Release|x64
+		{10DB2A66-4ABB-3195-BE59-75BD2845A8C9}.Release|x64.Build.0 = Release|x64
+		{FF9D7138-7FA9-3D91-9E17-436C991FFD1C}.Debug|x64.ActiveCfg = Debug|x64
+		{FF9D7138-7FA9-3D91-9E17-436C991FFD1C}.Debug|x64.Build.0 = Debug|x64
+		{FF9D7138-7FA9-3D91-9E17-436C991FFD1C}.Release|x64.ActiveCfg = Release|x64
+		{FF9D7138-7FA9-3D91-9E17-436C991FFD1C}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
