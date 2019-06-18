@@ -367,10 +367,10 @@ void AVThread::waitAndCheck(ulong value, qreal pts)
     if (value <= 0 || pts < 0)
         return;
 
-	if (d.wait_err < 0 && abs(d.wait_err) >= value)
-		value = 0;
-	else
-		value += d.wait_err;
+	//if (d.wait_err < 0 && abs(d.wait_err) >= value)
+	//	value = 0;
+	//else
+	//	value += d.wait_err;
 
     d.wait_timer.restart();
     //qDebug("wating for %lu msecs", value);
@@ -394,15 +394,15 @@ void AVThread::waitAndCheck(ulong value, qreal pts)
         }
         us = qMin<ulong>(us, left*1000);
     }
-    if (us > 0)
+    if (us > 1000)
         usleep(us);
-    //qDebug("wait elapsed: %lu %d/%lld", us, ms, et.elapsed());
-    const int de = ((ms-d.wait_timer.elapsed()) - d.wait_err);
-    if (de > -3 && de < 3)
-        d.wait_err += de;
-    else
-        d.wait_err += de > 0 ? 1 : -1;
-    //qDebug("err: %lld", d.wait_err);
+    ////qDebug("wait elapsed: %lu %d/%lld", us, ms, et.elapsed());
+    //const int de = ((ms-d.wait_timer.elapsed()) - d.wait_err);
+    //if (de > -3 && de < 3)
+    //    d.wait_err += de;
+    //else
+    //    d.wait_err += de > 0 ? 1 : -1;
+    ////qDebug("err: %lld", d.wait_err);
 }
 
 } //namespace QtAV
