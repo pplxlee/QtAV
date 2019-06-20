@@ -61,6 +61,8 @@ public:
       , hue(0)
       , saturation(0)
       , bg_color(0, 0, 0)
+      , mouse_color(50, 255, 50, 255)
+      , update_mouse(true)  // TODO: false
       , orientation(0)
     {
         //conv.setInFormat(PIX_FMT_YUV420P);
@@ -130,6 +132,11 @@ public:
 
     qreal brightness, contrast, hue, saturation;
     QColor bg_color;
+
+    // mouse rect and it's color
+    QRect mouse_rect;
+    QColor mouse_color; // TODO: add set interface
+    bool update_mouse;  // TODO: add set interface
 private:
     int orientation;
     friend class VideoRenderer;

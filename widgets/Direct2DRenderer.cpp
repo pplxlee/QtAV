@@ -75,6 +75,11 @@ protected:
     void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
     //stay on top will change parent, hide then show(windows)
     void showEvent(QShowEvent *) Q_DECL_OVERRIDE;
+
+    //TODO: delete it, because it is just for test
+    void mousePressEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+    void mouseReleaseEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+    void mouseMoveEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
 };
 typedef Direct2DRenderer VideoRendererDirect2D;
 extern VideoRendererId VideoRendererId_Direct2D;
@@ -368,6 +373,27 @@ void Direct2DRenderer::drawFrame()
                                 , 1 //opacity
                                 , d.interpolation
                                 , &roi_d2d);
+
+    // TODO: move to drawOSD
+    QRect mouseRect = d.mouse_rect.normalized();
+    if(mouseRect.isEmpty())
+        return;
+    qDebug("mouse rect left:%d top:%d right:%d bottom:%d", mouseRect.left(), mouseRect.top(),
+           mouseRect.right(), mouseRect.bottom());
+    ID2D1SolidColorBrush *m_pMouseBrush;
+    d.render_target->CreateSolidColorBrush(
+            D2D1::ColorF(d.mouse_color.rgba()),
+            &m_pMouseBrush
+            );
+    ;
+    d.render_target->DrawRectangle(D2D1::Rect(mouseRect.left(), mouseRect.top(),
+                                              mouseRect.right(), mouseRect.bottom()),
+                                   m_pMouseBrush, 1.5f);
+    if (m_pMouseBrush != NULL){
+        (m_pMouseBrush)->Release();
+        (m_pMouseBrush) = NULL;
+    }
+
 }
 
 void Direct2DRenderer::paintEvent(QPaintEvent *)
@@ -414,6 +440,27 @@ void Direct2DRenderer::showEvent(QShowEvent *)
 {
     DPTR_D(Direct2DRenderer);
     d.recreateDeviceResource();
+}
+
+void Direct2DRenderer::mousePressEvent(QMouseEvent *event)
+{
+    DPTR_D(Direct2DRenderer);
+    d.mouse_rect.setTopLeft(QPoint(event->pos().x() - 1,
+                                   event->pos().y() - 1));
+    d.mouse_rect.setBottomRight(event->pos());
+}
+
+void Direct2DRenderer::mouseReleaseEvent(QMouseEvent *event)
+{
+    DPTR_D(Direct2DRenderer);
+    d.mouse_rect = QRect();
+}
+
+void Direct2DRenderer::mouseMoveEvent(QMouseEvent *event)
+{
+    DPTR_D(Direct2DRenderer);
+    if(event->buttons() == Qt::LeftButton)
+        d.mouse_rect.setBottomRight(event->pos());
 }
 
 } //namespace QtAV
