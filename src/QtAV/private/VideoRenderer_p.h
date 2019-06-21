@@ -64,7 +64,9 @@ public:
       , saturation(0)
       , bg_color(0, 0, 0)
       , mouse_color(50, 255, 50, 255)
+      , mouse_rect_width(1.5)
       , orientation(0)
+      , object_rects_width(1.5)
     {
         //conv.setInFormat(PIX_FMT_YUV420P);
         //conv.setOutFormat(PIX_FMT_BGR32); //TODO: why not RGB32?
@@ -137,8 +139,10 @@ public:
     // mouse rect and it's color
     QRect mouse_rect;
     QColor mouse_color;
+    float mouse_rect_width;
     // rects in picture, their are relative about the video picture rect.
     QVector<RectColorPair> object_rects;
+    float object_rects_width;
 private:
     int orientation;
     friend class VideoRenderer;

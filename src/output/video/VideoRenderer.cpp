@@ -684,6 +684,20 @@ void VideoRenderer::setMouseRect(const QRect &rect)
     updateUi();
 }
 
+float VideoRenderer::mouseRectWidth() const
+{
+    return d_func().mouse_rect_width;
+}
+
+void VideoRenderer::setMouseRectWidth(float w)
+{
+    DPTR_D(VideoRenderer);
+    if (d.mouse_rect_width == w)
+        return;
+    d.mouse_rect_width = w;
+    updateUi();
+}
+
 QVector<RectColorPair> VideoRenderer::objectRects() const
 {
     return d_func().object_rects;
@@ -693,6 +707,20 @@ void VideoRenderer::setObjectRects(const QVector<RectColorPair> &rects)
 {
     DPTR_D(VideoRenderer);
     d.object_rects = rects;
+    updateUi();
+}
+
+float VideoRenderer::objectRectsWidth() const
+{
+    return d_func().object_rects_width;
+}
+
+void VideoRenderer::setObjectRectsWidth(float w)
+{
+    DPTR_D(VideoRenderer);
+    if (d.object_rects_width == w)
+        return;
+    d.object_rects_width = w;
     updateUi();
 }
 

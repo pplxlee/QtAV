@@ -393,7 +393,7 @@ void Direct2DRenderer::drawFrame()
         d.solidBrush->SetColor(D2D1::ColorF(d.mouse_color.rgba()));
         d.render_target->DrawRectangle(D2D1::Rect(mouseRect.left(), mouseRect.top(),
                                                   mouseRect.right(), mouseRect.bottom()),
-                                       d.solidBrush, 1.5f);
+                                       d.solidBrush, d.mouse_rect_width);
     }
 
     // draw obj rects
@@ -406,7 +406,7 @@ void Direct2DRenderer::drawFrame()
         d.solidBrush->SetColor(D2D1::ColorF(pair.color.rgba()));
         d.render_target->DrawRectangle(D2D1::Rect(rect.left(), rect.top(),
                                                   rect.right(), rect.bottom()),
-                                       d.solidBrush, 1.5f);
+                                       d.solidBrush, d.object_rects_width);
     }
 }
 

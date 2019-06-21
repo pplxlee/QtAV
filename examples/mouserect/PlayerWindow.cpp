@@ -146,6 +146,7 @@ void PlayerWindow::mouseReleaseEvent(QMouseEvent *event)
         }
         m_objectRects.append({m_mouseRect, QColor(200 * m_objectRects.size() / 30 + 50,
                               50, 200 * (30 - m_objectRects.size()) / 30 + 50)});
+//        m_vr->setObjectRectsWidth(m_objectRects.size() * .5);
         m_vr->setObjectRects(m_objectRects);
         m_mouseRect = QRect();
         m_vr->setMouseRect(m_mouseRect);

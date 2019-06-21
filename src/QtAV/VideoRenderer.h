@@ -205,8 +205,12 @@ public:
     void setMouseRectColor(const QColor &c);
     QRect mouseRect() const;
     void setMouseRect(const QRect &rect);
+    float mouseRectWidth() const;
+    void setMouseRectWidth(float w);
     QVector<RectColorPair> objectRects() const;
     void setObjectRects(const QVector<RectColorPair> &rects);
+    float objectRectsWidth() const;
+    void setObjectRectsWidth(float w);
     /*!
      * \brief opengl
      * Currently you can only use it to set custom shader OpenGLVideo.setUserShader()
