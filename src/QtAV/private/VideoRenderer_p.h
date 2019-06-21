@@ -64,7 +64,6 @@ public:
       , saturation(0)
       , bg_color(0, 0, 0)
       , mouse_color(50, 255, 50, 255)
-      , update_mouse(true)  // TODO: false
       , orientation(0)
     {
         //conv.setInFormat(PIX_FMT_YUV420P);
@@ -137,8 +136,7 @@ public:
 
     // mouse rect and it's color
     QRect mouse_rect;
-    QColor mouse_color; // TODO: add set interface
-    bool update_mouse;  // TODO: add set interface
+    QColor mouse_color;
     // rects in picture, their are relative about the video picture rect.
     QVector<RectColorPair> object_rects;
 private:
