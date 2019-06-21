@@ -4,6 +4,7 @@
 
 #include <QWidget>
 #include <QtAV>
+#include <QRect>
 
 QT_BEGIN_NAMESPACE
 class QSlider;
@@ -24,6 +25,13 @@ private Q_SLOTS:
     void updateSlider();
     void updateSliderUnit();
 
+    // QWidget interface
+protected:
+    void mousePressEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event);
+    void mouseDoubleClickEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
+
 private:
     QtAV::VideoRenderer *m_vr;
     QtAV::AVPlayer *m_player;
@@ -32,6 +40,8 @@ private:
     QPushButton *m_playBtn;
     QPushButton *m_stopBtn;
     int m_unit;
+    QRect m_mouseRect;
+
 };
 
 

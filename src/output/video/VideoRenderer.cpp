@@ -670,6 +670,20 @@ void VideoRenderer::setMouseRectColor(const QColor &c)
     updateUi();
 }
 
+QRect VideoRenderer::mouseRect() const
+{
+    return d_func().mouse_rect;
+}
+
+void VideoRenderer::setMouseRect(const QRect &rect)
+{
+    DPTR_D(VideoRenderer);
+    if (d.mouse_rect == rect)
+        return;
+    d.mouse_rect = rect;
+    updateUi();
+}
+
 void VideoRenderer::updateUi()
 {
     QObject *obj = (QObject*)widget();

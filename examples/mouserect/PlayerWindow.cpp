@@ -124,3 +124,70 @@ void PlayerWindow::updateSliderUnit()
     m_unit = m_player->notifyInterval();
     updateSlider();
 }
+
+void PlayerWindow::mousePressEvent(QMouseEvent *event)
+{
+    if(event->button() == Qt::LeftButton) {
+        QPoint pos = m_vr->widget()->mapFromParent(event->pos());
+        m_mouseRect.setTopLeft(pos);
+        m_mouseRect.setBottomRight(pos);
+        m_vr->setMouseRect(m_mouseRect);
+        qDebug()<<"mouse press rect is" << m_mouseRect;
+    }
+    else {
+        QWidget::mousePressEvent(event);
+    }
+}
+
+void PlayerWindow::mouseReleaseEvent(QMouseEvent *event)
+{
+    if(event->button() == Qt::LeftButton) {
+        m_mouseRect = QRect();
+        m_vr->setMouseRect(m_mouseRect);
+        qDebug()<<"mouse release rect is" << m_mouseRect;
+    }
+    else {
+        QWidget::mouseReleaseEvent(event);
+    }
+}
+
+void PlayerWindow::mouseDoubleClickEvent(QMouseEvent *event)
+{
+    if(event->button() != Qt::LeftButton) {
+        QWidget::mouseDoubleClickEvent(event);
+        return;
+    }
+
+    bool visible = this->isFullScreen();
+    if(this->isFullScreen()) {
+        foreach (QObject *obj, this->children()) {
+            if(obj->isWidgetType() && obj != m_vr->widget())
+                static_cast<QWidget *>(obj)->setVisible(visible);
+        }
+        this->layout()->setMargin(3);
+        this->showNormal();
+    }
+    else {
+        foreach (QObject *obj, this->children()) {
+            if(obj->isWidgetType() && obj != m_vr->widget())
+                static_cast<QWidget *>(obj)->setVisible(visible);
+        }
+        this->layout()->setMargin(0);
+        this->showFullScreen();
+    }
+}
+
+void PlayerWindow::mouseMoveEvent(QMouseEvent *event)
+{
+    // 条件 !(m_mouseRect == QRect())可以防止双击时的触发
+    // 双击时，会在release的情况下，触发一次有LeftButton按下的event，导致绘制一次不正常的框选
+    if(!(m_mouseRect == QRect()) && (event->buttons() &= Qt::LeftButton)) {
+        QPoint pos = m_vr->widget()->mapFromParent(event->pos());
+        m_mouseRect.setBottomRight(pos);
+        m_vr->setMouseRect(m_mouseRect);
+        qDebug()<<"mouse move rect is" << m_mouseRect;
+    }
+    else {
+        QWidget::mouseMoveEvent(event);
+    }
+}

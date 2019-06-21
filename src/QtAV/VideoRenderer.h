@@ -200,6 +200,8 @@ public:
     void setBackgroundColor(const QColor& c);
     QColor mouseRectColor() const;
     void setMouseRectColor(const QColor &c);
+    QRect mouseRect() const;
+    void setMouseRect(const QRect &rect);
 
     /*!
      * \brief opengl
