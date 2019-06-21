@@ -1,6 +1,7 @@
 TEMPLATE = subdirs
 
-SUBDIRS = common
+SUBDIRS = common \
+    mouserect
 !android:!ios:!winrt {
   SUBDIRS += audiopipeline
 !no-widgets {
