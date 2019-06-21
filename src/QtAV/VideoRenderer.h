@@ -198,6 +198,8 @@ public:
     bool setSaturation(qreal saturation);
     QColor backgroundColor() const;
     void setBackgroundColor(const QColor& c);
+    QColor mouseRectColor() const;
+    void setMouseRectColor(const QColor &c);
 
     /*!
      * \brief opengl
