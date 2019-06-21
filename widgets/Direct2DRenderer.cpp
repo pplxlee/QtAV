@@ -33,6 +33,8 @@
 #include <initguid.h> //IID_ID2D1Factory
 #include <d2d1.h>
 
+#include <QDebug>
+
 //steps: http://msdn.microsoft.com/zh-cn/library/dd317121(v=vs.85).aspx
 //performance: http://msdn.microsoft.com/en-us/library/windows/desktop/dd372260(v=vs.85).aspx
 //vlc is helpful
@@ -102,6 +104,7 @@ public:
       , bitmap(0)
       , bitmap_width(0)
       , bitmap_height(0)
+      , solidBrush(0)
       , interpolation(D2D1_BITMAP_INTERPOLATION_MODE_LINEAR)
     {
         dll.setFileName(QStringLiteral("d2d1"));
@@ -195,8 +198,19 @@ public:
         if (FAILED(hr)) {
             qWarning("Direct2D is disabled. CreateHwndRenderTarget() failed: %d", (int)GetLastError());
             render_target = 0;
+            solidBrush = 0;
             return false;
         }
+
+        hr = render_target->CreateSolidColorBrush(
+                    D2D1::ColorF(0),
+                    &solidBrush
+                    );
+        if (FAILED(hr)) {
+            qWarning("SolidColorBrush is disabled. CreateSolidColorBrush() failed: %d", (int)GetLastError());
+            solidBrush = 0;
+        }
+
         SafeRelease(&bitmap);
         prepareBitmap(src_width, src_height); //bitmap depends on render target
         return hr == S_OK;
@@ -204,6 +218,7 @@ public:
     void destroyDeviceResource() {
         SafeRelease(&render_target);
         SafeRelease(&bitmap);
+        SafeRelease(&solidBrush);
     }
     void recreateDeviceResource() {
         qDebug("D2DERR_RECREATE_TARGET");
@@ -269,6 +284,7 @@ public:
     D2D1_BITMAP_PROPERTIES bitmap_properties;
     ID2D1Bitmap *bitmap;
     int bitmap_width, bitmap_height; //can not use src_width, src height because bitmap not update when they changes
+    ID2D1SolidColorBrush *solidBrush;
     D2D1_BITMAP_INTERPOLATION_MODE interpolation;
     QLibrary dll;
 };
@@ -370,23 +386,28 @@ void Direct2DRenderer::drawFrame()
                                 , &roi_d2d);
 
     // TODO: move to drawOSD
+    // draw mouse rect
     QRect mouseRect = d.mouse_rect.normalized();
-    if(mouseRect.isEmpty())
-        return;
-    ID2D1SolidColorBrush *m_pMouseBrush;
-    d.render_target->CreateSolidColorBrush(
-            D2D1::ColorF(d.mouse_color.rgba()),
-            &m_pMouseBrush
-            );
-    ;
-    d.render_target->DrawRectangle(D2D1::Rect(mouseRect.left(), mouseRect.top(),
-                                              mouseRect.right(), mouseRect.bottom()),
-                                   m_pMouseBrush, 1.5f);
-    if (m_pMouseBrush != NULL){
-        (m_pMouseBrush)->Release();
-        (m_pMouseBrush) = NULL;
+
+    if(!mouseRect.isEmpty()) {
+        d.solidBrush->SetColor(D2D1::ColorF(d.mouse_color.rgba()));
+        d.render_target->DrawRectangle(D2D1::Rect(mouseRect.left(), mouseRect.top(),
+                                                  mouseRect.right(), mouseRect.bottom()),
+                                       d.solidBrush, 1.5f);
     }
 
+    // draw obj rects
+    foreach (RectColorPair pair, d.object_rects) {
+        qreal r = videoRect().width() / static_cast<qreal>(videoFrameSize().width());
+        QRectF rect;
+        rect.setTopLeft(QPointF(pair.rect.topLeft()) * r);
+        rect.setBottomRight(QPointF(pair.rect.bottomRight()) * r);
+        rect.translate(videoRect().topLeft());
+        d.solidBrush->SetColor(D2D1::ColorF(pair.color.rgba()));
+        d.render_target->DrawRectangle(D2D1::Rect(rect.left(), rect.top(),
+                                                  rect.right(), rect.bottom()),
+                                       d.solidBrush, 1.5f);
+    }
 }
 
 void Direct2DRenderer::paintEvent(QPaintEvent *)

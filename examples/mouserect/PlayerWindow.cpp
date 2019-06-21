@@ -132,7 +132,6 @@ void PlayerWindow::mousePressEvent(QMouseEvent *event)
         m_mouseRect.setTopLeft(pos);
         m_mouseRect.setBottomRight(pos);
         m_vr->setMouseRect(m_mouseRect);
-        qDebug()<<"mouse press rect is" << m_mouseRect;
     }
     else {
         QWidget::mousePressEvent(event);
@@ -142,9 +141,14 @@ void PlayerWindow::mousePressEvent(QMouseEvent *event)
 void PlayerWindow::mouseReleaseEvent(QMouseEvent *event)
 {
     if(event->button() == Qt::LeftButton) {
+        if(m_objectRects.size() >= 30) {
+            m_objectRects.clear();
+        }
+        m_objectRects.append({m_mouseRect, QColor(200 * m_objectRects.size() / 30 + 50,
+                              50, 200 * (30 - m_objectRects.size()) / 30 + 50)});
+        m_vr->setObjectRects(m_objectRects);
         m_mouseRect = QRect();
         m_vr->setMouseRect(m_mouseRect);
-        qDebug()<<"mouse release rect is" << m_mouseRect;
     }
     else {
         QWidget::mouseReleaseEvent(event);
@@ -185,7 +189,6 @@ void PlayerWindow::mouseMoveEvent(QMouseEvent *event)
         QPoint pos = m_vr->widget()->mapFromParent(event->pos());
         m_mouseRect.setBottomRight(pos);
         m_vr->setMouseRect(m_mouseRect);
-        qDebug()<<"mouse move rect is" << m_mouseRect;
     }
     else {
         QWidget::mouseMoveEvent(event);

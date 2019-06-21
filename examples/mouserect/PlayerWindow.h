@@ -41,7 +41,7 @@ private:
     QPushButton *m_stopBtn;
     int m_unit;
     QRect m_mouseRect;
-
+    QVector<QtAV::RectColorPair> m_objectRects;
 };
 
 

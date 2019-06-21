@@ -41,7 +41,10 @@ class QGraphicsItem;
 QT_END_NAMESPACE
 
 namespace QtAV {
-
+typedef struct RectColorPair_{
+    QRect rect;
+    QColor color;
+}RectColorPair;
 typedef int VideoRendererId;
 extern Q_AV_EXPORT VideoRendererId VideoRendererId_OpenGLWindow;
 class Filter;
@@ -202,7 +205,8 @@ public:
     void setMouseRectColor(const QColor &c);
     QRect mouseRect() const;
     void setMouseRect(const QRect &rect);
-
+    QVector<RectColorPair> objectRects() const;
+    void setObjectRects(const QVector<RectColorPair> &rects);
     /*!
      * \brief opengl
      * Currently you can only use it to set custom shader OpenGLVideo.setUserShader()

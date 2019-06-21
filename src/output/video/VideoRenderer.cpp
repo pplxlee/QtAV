@@ -684,6 +684,18 @@ void VideoRenderer::setMouseRect(const QRect &rect)
     updateUi();
 }
 
+QVector<RectColorPair> VideoRenderer::objectRects() const
+{
+    return d_func().object_rects;
+}
+
+void VideoRenderer::setObjectRects(const QVector<RectColorPair> &rects)
+{
+    DPTR_D(VideoRenderer);
+    d.object_rects = rects;
+    updateUi();
+}
+
 void VideoRenderer::updateUi()
 {
     QObject *obj = (QObject*)widget();

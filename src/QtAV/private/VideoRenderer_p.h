@@ -28,6 +28,7 @@
 #include <QtCore/QRect>
 #include <QtAV/VideoFrame.h>
 #include <QtGui/QColor>
+#include <QtCore/QVector>
 #include "QtAV/Statistics.h"
 /*TODO:
  * Region of Interest(ROI)
@@ -38,6 +39,7 @@ class QObject;
 class QWidget;
 QT_END_NAMESPACE
 namespace QtAV {
+
 class Filter;
 class Q_AV_PRIVATE_EXPORT VideoRendererPrivate : public AVOutputPrivate
 {
@@ -137,6 +139,8 @@ public:
     QRect mouse_rect;
     QColor mouse_color; // TODO: add set interface
     bool update_mouse;  // TODO: add set interface
+    // rects in picture, their are relative about the video picture rect.
+    QVector<RectColorPair> object_rects;
 private:
     int orientation;
     friend class VideoRenderer;
