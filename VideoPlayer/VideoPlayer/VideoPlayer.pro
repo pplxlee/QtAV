@@ -30,11 +30,19 @@ SOURCES += \
 
 HEADERS += \
         MainWindow.h
+    MessageCallback.h
 
 FORMS += \
         MainWindow.ui
+
+TRANSLATIONS += \
+        tr_en.ts \
+        tr_zh_CN.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    res.qrc
