@@ -94,7 +94,7 @@ config_direct2d {
   DEFINES *= QTAV_HAVE_DIRECT2D=1
   !*msvc*: INCLUDEPATH += $$PROJECTROOT/contrib/d2d1headers
   SOURCES += Direct2DRenderer.cpp
-  #LIBS += -lD2d1
+  LIBS += -lD2d1
 }
 config_xv {
   DEFINES *= QTAV_HAVE_XV=1

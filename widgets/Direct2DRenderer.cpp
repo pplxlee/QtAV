@@ -365,12 +365,27 @@ void Direct2DRenderer::drawFrame()
     DPTR_D(Direct2DRenderer);
     if (!d.bitmap || d.out_rect.isEmpty())
         return;
+
     D2D1_RECT_F out_rect = {
         (FLOAT)d.out_rect.x(),
         (FLOAT)d.out_rect.y(),
         (FLOAT)(d.out_rect.x() + d.out_rect.width()), // QRect.right() is x+width-1 for historical reason
         (FLOAT)(d.out_rect.y() + d.out_rect.height())
     };
+
+    QRect qrect_before_rotate_rect = d.out_rect;
+    if(d.statistics->video_only.rotate % 180) {
+        qrect_before_rotate_rect.setWidth(d.out_rect.height());
+        qrect_before_rotate_rect.setHeight(d.out_rect.width());
+        qrect_before_rotate_rect.moveCenter(d.out_rect.center());
+    }
+    D2D1_RECT_F before_rotate_rect = {
+        (FLOAT)qrect_before_rotate_rect.x(),
+        (FLOAT)qrect_before_rotate_rect.y(),
+        (FLOAT)(qrect_before_rotate_rect.x() + qrect_before_rotate_rect.width()), // QRect.right() is x+width-1 for historical reason
+        (FLOAT)(qrect_before_rotate_rect.y() + qrect_before_rotate_rect.height())
+    };
+
     QRect roi = realROI();
     D2D1_RECT_F roi_d2d = {
         (FLOAT)roi.x(),
@@ -378,12 +393,32 @@ void Direct2DRenderer::drawFrame()
         (FLOAT)(roi.x() + roi.width()),
         (FLOAT)(roi.y() + roi.height())
     };
-    //d.render_target->SetTransform
+    if(d.statistics->video_only.rotate!=0)
+        d.render_target->SetTransform(D2D1::Matrix3x2F::Rotation(
+                                          -d.statistics->video_only.rotate,
+                                          D2D1::Point2F(d.out_rect.center().x(),
+                                                        d.out_rect.center().y())));
     d.render_target->DrawBitmap(d.bitmap
-                                , &out_rect
+                                , &before_rotate_rect
                                 , 1 //opacity
                                 , d.interpolation
                                 , &roi_d2d);
+
+    // draw obj rects
+    foreach (RectColorPair pair, d.object_rects) {
+        qreal r = videoRect().width() / static_cast<qreal>(videoFrameSize().width());
+        QRectF rect;
+        rect.setTopLeft(QPointF(pair.rect.topLeft()) * r);
+        rect.setBottomRight(QPointF(pair.rect.bottomRight()) * r);
+        rect.translate(qrect_before_rotate_rect.topLeft());
+        d.solidBrush->SetColor(D2D1::ColorF(pair.color.rgba()));
+        d.render_target->DrawRectangle(D2D1::Rect(rect.left(), rect.top(),
+                                                  rect.right(), rect.bottom()),
+                                       d.solidBrush, d.object_rects_width);
+    }
+
+    if(d.statistics->video_only.rotate!=0)
+        d.render_target->SetTransform(D2D1::Matrix3x2F::Identity());
 
     // TODO: move to drawOSD
     // draw mouse rect
@@ -394,19 +429,6 @@ void Direct2DRenderer::drawFrame()
         d.render_target->DrawRectangle(D2D1::Rect(mouseRect.left(), mouseRect.top(),
                                                   mouseRect.right(), mouseRect.bottom()),
                                        d.solidBrush, d.mouse_rect_width);
-    }
-
-    // draw obj rects
-    foreach (RectColorPair pair, d.object_rects) {
-        qreal r = videoRect().width() / static_cast<qreal>(videoFrameSize().width());
-        QRectF rect;
-        rect.setTopLeft(QPointF(pair.rect.topLeft()) * r);
-        rect.setBottomRight(QPointF(pair.rect.bottomRight()) * r);
-        rect.translate(videoRect().topLeft());
-        d.solidBrush->SetColor(D2D1::ColorF(pair.color.rgba()));
-        d.render_target->DrawRectangle(D2D1::Rect(rect.left(), rect.top(),
-                                                  rect.right(), rect.bottom()),
-                                       d.solidBrush, d.object_rects_width);
     }
 }
 
