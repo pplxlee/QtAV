@@ -2,7 +2,8 @@ include(root.pri)
 
 TEMPLATE = subdirs
 CONFIG -= ordered
-SUBDIRS = libqtav tools
+SUBDIRS = libqtav tools \
+    VideoPlayer
 libqtav.file = src/libQtAV.pro
 !no-widgets {
   SUBDIRS += libqtavwidgets
