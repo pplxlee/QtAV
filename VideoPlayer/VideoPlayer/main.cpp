@@ -8,6 +8,7 @@
 #include <QStyleFactory>
 #include <QTranslator>
 #include <QLibraryInfo>
+#include <QSettings>
 #include <iostream>
 #ifdef _WIN32
 #include <Windows.h>
@@ -116,6 +117,14 @@ int main(int argc, char *argv[])
     // 设置程序路径为工作路径
     QDir::setCurrent(QApplication::applicationDirPath());
 
+    // 设置公司名字和应用名字
+    QCoreApplication::setOrganizationName("SuperHawk Chengdu");
+    QCoreApplication::setApplicationName("VideoPlayer");
+
+    // 获取设置
+    VPConfigure::getInstance()->initSettings(QCoreApplication::organizationName(),
+                                             QCoreApplication::applicationName());
+
     // Log system
     if(!installLogSystem())
         qWarning() << "Install log systom failed!";
@@ -130,15 +139,11 @@ int main(int argc, char *argv[])
 
     // TODO: 设置文件关联
 
-//    QTranslator appTranslator;
+
     g_appTranslator = new QTranslator;
-    trload(QLocale::system().name());
-//    if(QFile(":/tr/tr_" + QLocale::system().name() + ".qm").exists()) {
-//        g_appTranslator->load(":/tr/tr_" + QLocale::system().name() + ".qm");
-//    }
-//    else {
-//        g_appTranslator->load(":/tr/tr_zh_CN.qm"); // 否则默认使用中文
-//    }
+    QString lgConf = VPConfigure::getInstance()->settings()->value("language", QLocale::system().name()).toString();
+    trload(lgConf);
+
     a.installTranslator(g_appTranslator);
 
     MainWindow w;
@@ -158,18 +163,14 @@ int main(int argc, char *argv[])
         {
             QString languageType = argv1.section("-Language:", 1, 1).left(2);
             qInfo()<<"main()"<<"Request languageType is"<< languageType;
-            QString qmfile;
             if(languageType.compare("en", Qt::CaseInsensitive) == 0) {
-                qmfile = ":/tr/tr_en.qm";
+                w.translateEn();
             }
             else if (languageType.compare("zh", Qt::CaseInsensitive) == 0) {
-                qmfile = ":/tr/tr_zh_CN.qm";
+                w.translateZhCh();
             }
-            if(!qmfile.isEmpty()) {
-                qDebug()<<"qmfile is " << qmfile;
-                g_appTranslator->load(qmfile);
-                a.installTranslator(g_appTranslator);
-                w.translate();
+            else {
+                qWarning() << "The Language arg is invaild!";
             }
         }
     }

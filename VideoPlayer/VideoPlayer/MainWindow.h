@@ -16,17 +16,23 @@ public:
     ~MainWindow();
 
 public slots:
-    void translate();
-
-private slots:
     void translateEn();
     void translateZhCh();
+
+private:
+    void translate();
+    void onTranslated();
+
+signals:
+    void translated();
 
 private:
     Ui::MainWindow *ui;
 
     QAction *actionQuitFullscreen;
     QAction *actionStopTrack;
+
+    QString mLanguage;
 };
 
 #endif // MAINWINDOW_H

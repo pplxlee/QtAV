@@ -2,6 +2,7 @@
 #include "ui_MainWindow.h"
 #include "vp_global.h"
 #include <QAction>
+#include <QSettings>
 #include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -37,6 +38,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // TODO: 连接各个信号槽
     connect(ui->actionEnglish, &QAction::triggered, this, &MainWindow::translateEn);
     connect(ui->actionjian_ti_zhong_wen, &QAction::triggered, this, &MainWindow::translateZhCh);
+    connect(this, &MainWindow::translated, this, &MainWindow::onTranslated);
 }
 
 MainWindow::~MainWindow()
@@ -44,19 +46,25 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::translate()
-{
-    ui->retranslateUi(this);
-}
-
 void MainWindow::translateEn()
 {
-    trloadEn();
+    mLanguage = trloadEn();
     translate();
 }
 
 void MainWindow::translateZhCh()
 {
-    trloadZhCh();
+    mLanguage = trloadZhCh();
     translate();
+}
+
+void MainWindow::translate()
+{
+    ui->retranslateUi(this);
+    emit translated();
+}
+
+void MainWindow::onTranslated()
+{
+    VPConfigure::getInstance()->settings()->setValue("language", mLanguage);
 }
