@@ -18,6 +18,10 @@ public:
 public slots:
     void translate();
 
+private slots:
+    void translateEn();
+    void translateZhCh();
+
 private:
     Ui::MainWindow *ui;
 

@@ -1,5 +1,6 @@
 #include "MainWindow.h"
 #include "ui_MainWindow.h"
+#include "vp_global.h"
 #include <QAction>
 #include <QDebug>
 
@@ -32,8 +33,10 @@ MainWindow::MainWindow(QWidget *parent) :
     actionQuitFullscreen->setShortcut(Qt::Key_Escape);
     actionStopTrack->setShortcut(QString("Shift+Esc"));
 
-    // TODO: 连接各个信号槽
 
+    // TODO: 连接各个信号槽
+    connect(ui->actionEnglish, &QAction::triggered, this, &MainWindow::translateEn);
+    connect(ui->actionjian_ti_zhong_wen, &QAction::triggered, this, &MainWindow::translateZhCh);
 }
 
 MainWindow::~MainWindow()
@@ -44,4 +47,16 @@ MainWindow::~MainWindow()
 void MainWindow::translate()
 {
     ui->retranslateUi(this);
+}
+
+void MainWindow::translateEn()
+{
+    trloadEn();
+    translate();
+}
+
+void MainWindow::translateZhCh()
+{
+    trloadZhCh();
+    translate();
 }

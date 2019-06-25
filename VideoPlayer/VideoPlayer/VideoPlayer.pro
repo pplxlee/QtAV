@@ -26,10 +26,12 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        MainWindow.cpp
+        MainWindow.cpp \
+    vp_global.cpp
 
 HEADERS += \
-        MainWindow.h
+        MainWindow.h \
+    vp_global.h
     MessageCallback.h
 
 FORMS += \

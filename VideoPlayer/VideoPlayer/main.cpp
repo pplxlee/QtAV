@@ -1,4 +1,5 @@
 #include "MainWindow.h"
+#include "vp_global.h"
 #include <QApplication>
 #include <QDateTime>
 #include <QDir>
@@ -98,6 +99,8 @@ void closeLogFile()
     }
 }
 
+QTranslator *g_appTranslator;
+
 int main(int argc, char *argv[])
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
@@ -127,14 +130,16 @@ int main(int argc, char *argv[])
 
     // TODO: 设置文件关联
 
-    QTranslator appTranslator;
-    if(QFile(":/tr/tr_" + QLocale::system().name() + ".qm").exists()) {
-        appTranslator.load(":/tr/tr_" + QLocale::system().name() + ".qm");
-    }
-    else {
-        appTranslator.load(":/tr/tr_zh_CN.qm"); // 否则默认使用中文
-    }
-    a.installTranslator(&appTranslator);
+//    QTranslator appTranslator;
+    g_appTranslator = new QTranslator;
+    trload(QLocale::system().name());
+//    if(QFile(":/tr/tr_" + QLocale::system().name() + ".qm").exists()) {
+//        g_appTranslator->load(":/tr/tr_" + QLocale::system().name() + ".qm");
+//    }
+//    else {
+//        g_appTranslator->load(":/tr/tr_zh_CN.qm"); // 否则默认使用中文
+//    }
+    a.installTranslator(g_appTranslator);
 
     MainWindow w;
     w.show();
@@ -162,8 +167,8 @@ int main(int argc, char *argv[])
             }
             if(!qmfile.isEmpty()) {
                 qDebug()<<"qmfile is " << qmfile;
-                appTranslator.load(qmfile);
-                a.installTranslator(&appTranslator);
+                g_appTranslator->load(qmfile);
+                a.installTranslator(g_appTranslator);
                 w.translate();
             }
         }
